@@ -1,0 +1,4 @@
+tokenizers==0.5.2
+torch==1.4.0
+allennlp==0.9.1.dev20200220
+transformers==2.6.0
