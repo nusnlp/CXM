@@ -13,18 +13,14 @@ pip install -r requirements.txt
 
 Install allennlp
 ```bash
-sh install_allennlp.sh
+bash install_allennlp.sh
 ```
 
 ### Data ###
 
-Instructions of downloading and preprocessing data will be available soon.
+Refer to `data/README.md` for instructions of data downloading and preprocessing.
 
-The processed data files are moved to `data/en` and `data/jp` for English track and Japanese track, respectively.
-
-The processed training sets `data/en/train_d.json` and `data/jp/train_d.json` follow the CXM-D setting, which include data in both languages.
-
-The DBDC4 labeled evaluation data files are moved to `data/en/eval_all` and `data/japanese/eval_all` for English track and Japanese track, respectively.
+The processed data files will be located at `data/en` and `data/jp` for English track and Japanese track, respectively.
 
 
 ### Training ###
@@ -55,8 +51,7 @@ allennlp predict models/$model_dir/model.tar.gz data/en/eval.jsonl \
 ```
 
 ### Evaluation ###
-
-For evaluation, we follow the use of official DBDC evaluation script `evaluation/eval_script/eval.py`.
+The evaluation script will be downloaded during the process of data downloading and preprocessing.
 
 First, convert prediction file to seperate json files:
 
@@ -67,7 +62,7 @@ python convert_predictions_to_files.py --eval_file ../models/$model_dir/eval_pre
 ```
 Then run the evaluation script:
 ```bash
-python2 eval_script/eval.py -t 0.0 -p ../data/english/eval_all/ -o pred_label_files/labels_$model_dir
+python2 eval_script/eval.py -t 0.0 -p ../data/en/eval_all/ -o pred_label_files/labels_$model_dir
 ```
 
 
