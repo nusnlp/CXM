@@ -1,3 +1,6 @@
 /data
-/.DS_Store
+**/__pycache__
+**/.DS_Store
 /.idea
+*.pyc
+*.egg-info

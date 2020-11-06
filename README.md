@@ -8,9 +8,13 @@ paper A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection
 
 Install the packages listed in the `requirements.txt` file.
 ```bash
-pip install - r requirements.txt
+pip install -r requirements.txt
 ```
 
+Install allennlp
+```bash
+sh install_allennlp.sh
+```
 
 ### Data ###
 
@@ -20,7 +24,7 @@ The processed data files are moved to `data/en` and `data/jp` for English track 
 
 The processed training sets `data/en/train_d.json` and `data/jp/train_d.json` follow the CXM-D setting, which include data in both languages.
 
-The DBDC4 labeled evaluation data files are moved to `data/english/eval_all` and `data/japanese/eval_all` for English track and Japanese track, respectively.
+The DBDC4 labeled evaluation data files are moved to `data/en/eval_all` and `data/japanese/eval_all` for English track and Japanese track, respectively.
 
 
 ### Training ###
@@ -37,7 +41,6 @@ Similarly for Japanese track:
 allennlp train -s models/jp_cxm_d --include-package cxm training_configs/jp_cxm_d.json
 ```
 
-
 ### Prediction ###
 
 ```bash
@@ -50,7 +53,6 @@ allennlp predict models/$model_dir/model.tar.gz data/en/eval.jsonl \
                     --include-package cxm \
                     --silent
 ```
-
 
 ### Evaluation ###
 
