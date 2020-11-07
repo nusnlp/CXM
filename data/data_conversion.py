@@ -31,20 +31,20 @@ def get_label_scores(label_list):
 	return [label0_score, label1_score, label2_score]
 
 def rename_dialogue_id(json_dir, dialogue_id):
-    if 'LIVE' in json_dir:
-        sp = json_dir.index('LIVE')
-        ep = json_dir.index('.log.json')
-        return json_dir[sp:ep]
-    else:
-        return dialogue_id
+	if 'LIVE' in json_dir:
+		sp = json_dir.index('LIVE')
+		ep = json_dir.index('.log.json')
+		return json_dir[sp:ep]
+	else:
+		return dialogue_id
 
 def read_json(json_dir, mode, inst_count):
-    f = open(json_dir, 'r', encoding='utf-8')
-    data = json.load(f)
-    f.close()
-    dialogue_id = data['dialogue-id']
-    dialogue_id = rename_dialogue_id(json_dir, dialogue_id)
-    prev_turns = []
+	f = open(json_dir, 'r', encoding='utf-8')
+	data = json.load(f)
+	f.close()
+	dialogue_id = data['dialogue-id']
+	dialogue_id = rename_dialogue_id(json_dir, dialogue_id)
+	prev_turns = []
 	json_instances = []
 	jsonl_instances = []
 	for turn in data['turns']:
