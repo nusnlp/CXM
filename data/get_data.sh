@@ -61,6 +61,7 @@ mv DBDC4_dev_20190312 dbdc4-dev
 # DBDC4-jp-dev
 mkdir -p dbdc4-jp-dev
 for dir in dbdc4-dev/ja/dbd_livecompe_dev/*; do for f in $dir/*; do ff=${f##*/}; dd=${dir##*/}; cp "$f" "dbdc4-jp-dev/${ff//messages.html/LIVE-DEV-$dd}"; done; done
+python ../rename_dialogue_id.py --path dbdc4-jp-dev
 
 # DBDC4-en-dev
 mkdir -p dbdc4-en-dev
@@ -77,6 +78,7 @@ mkdir -p ../jp/eval_all
 mkdir -p dbdc4-jp-eval
 for dir in dbdc4-eval/jp/*[A-Z]*; do cp "${dir}"/*.log.json dbdc4-jp-eval; done
 for dir in dbdc4-eval/jp/dbd_livecompe_eval/*; do for f in $dir/*; do ff=${f##*/}; dd=${dir##*/}; cp "$f" "dbdc4-jp-eval/${ff//messages.html/LIVE-EVAL-$dd}"; done; done
+python ../rename_dialogue_id.py --path dbdc4-jp-eval
 cp dbdc4-jp-eval/*.log.json ../jp/eval_all
 
 # DBDC4-en-eval
