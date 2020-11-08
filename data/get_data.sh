@@ -89,7 +89,7 @@ cp dbdc4-en-eval/*.log.json ../en/eval_all
 
 # JP-train
 mkdir -p ../jp/train_all
-for d in dbdc1-jp-dev dbdc1-jp-eval dbdc2-jp-dev dbdc2-jp-eval dbdc4-jp-dev dbdc3-en-dev dbdc3-en-eval dbdc4-en-dev; do cp $d/*.log.json ../jp/train_all; done
+for d in dbdc3-en-dev dbdc3-en-eval dbdc4-en-dev dbdc1-jp-dev dbdc1-jp-eval dbdc2-jp-dev dbdc2-jp-eval dbdc4-jp-dev; do cp $d/*.log.json ../jp/train_all; done
 
 # JP-dev
 mkdir -p ../jp/dev_all

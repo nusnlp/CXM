@@ -37,6 +37,8 @@ Similarly for Japanese track:
 allennlp train -s models/jp_cxm_d --include-package cxm training_configs/jp_cxm_d.json
 ```
 
+We provide trained models. They can be downloaded by running `download_trained_models.sh`.
+
 ### Prediction ###
 
 ```bash
