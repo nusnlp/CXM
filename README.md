@@ -1,7 +1,18 @@
 # CXM  #
 
 This repository contains the source code of the 
-paper A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection.
+paper [A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection](https://www.aclweb.org/anthology/2020.coling-main.371.pdf).
+
+### Publication ###
+If you use the source code or models from this work, please cite our paper:
+```
+@inproceedings{lin-etal-2020-cxm,
+  author    = "Lin, Qian and Kundu, Souvik and Ng, Hwee Tou",
+  title     = "A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection",
+  booktitle = "Proceedings of the 28th International Conference on Computational Linguistics",
+  year      = "2020",
+}
+```
 
 
 ### Requirements ###
@@ -37,7 +48,7 @@ Similarly for Japanese track:
 allennlp train -s models/jp_cxm_d --include-package cxm training_configs/jp_cxm_d.json
 ```
 
-We provide trained models. They can be downloaded by running `download_trained_models.sh`.
+We provide trained models. They can be downloaded by running `bash download_trained_models.sh`.
 
 ### Prediction ###
 
