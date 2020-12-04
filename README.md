@@ -9,7 +9,7 @@ If you use the source code or models from this work, please cite our paper:
 @inproceedings{lin-etal-2020-cxm,
   author    = "Lin, Qian and Kundu, Souvik and Ng, Hwee Tou",
   title     = "A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection",
-  booktitle = "Proceedings of the 28th International Conference on Computational Linguistics",
+  booktitle = "Proceedings of COLING",
   year      = "2020",
 }
 ```
