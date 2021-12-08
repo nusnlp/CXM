@@ -1,7 +1,7 @@
 # CXM  #
 
 This repository contains the source code of the 
-paper [A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection](https://www.aclweb.org/anthology/2020.coling-main.371.pdf).
+paper [A Co-Attentive Cross-Lingual Neural Model for Dialogue Breakdown Detection](https://aclanthology.org/2020.coling-main.371.pdf).
 
 ### Publication ###
 If you use the source code or models from this work, please cite our paper:
